@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lily+Script+One&display=swap');
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+
+html {
+  scroll-behavior: smooth;
+  background-image: linear-gradient(to right, #ffe7cd, #d6a267);
+
+  background-size:100%;
+  letter-spacing: 0.1rem;
+}
+
+
+
+@theme {
+  --color-primary: #FFD09B; 
+  --color-secondary: #f36868;        
+  --color-background: #FFF7D1;     
+  --color-surface: #FFECC8;   
+  --font-inter: "inter", sans-serif;
+  --font-lily-script-one: "Lily Script One", sans-serif;
+  --font-comic-neue: "Comic Neue", cursive;
+}
