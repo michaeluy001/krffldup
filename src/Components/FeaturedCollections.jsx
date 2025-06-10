@@ -31,7 +31,7 @@ const FeaturedCollections = () => {
 
   return (
     <>
-      <div className="my-25   w-8/12 mx-auto content-center justify-items-center items-center ">
+      <div className="mb-50   w-8/12 mx-auto content-center justify-items-center items-center ">
         <Title>Our <Span type="primary" className="text-3xl">Best</Span> <br/> <Span type="secondary" className="text-3xl">Sellers</Span> </Title>
         <div className=" h-3/4 flex flex-col lg:flex-row items-center gap-25">
           {collections.map((item, index) => (
@@ -49,7 +49,7 @@ export default FeaturedCollections;
 const CollectionsCard = ({ card, index }) => {
   return (
     <>
-      <div className={`h-150 md:w-1/3 min-w-[300px] overflow-xhidden flex flex-col ${index % 2 === 1 ? 'lg:flex-col-reverse' : 'flex-col' } text-gray-500 bg-surface shadow-gray-100 shadow-sm`}>
+      <div className={`h-150  md:w-1/3 min-w-[300px] overflow-xhidden flex flex-col ${index % 2 === 1 ? 'lg:flex-col-reverse' : 'flex-col' }  bg-surface shadow-gray-100 shadow-sm`}>
         <div className=" h-1/2 ">
           <img
             src={card.imgSrc}

@@ -5,11 +5,11 @@ import aboutUs from "/src/assets/About Us.jpg";
 const AboutUs = () => {
   return (
     <>
-      <div className=" text-gray-800 my-25"> 
-        <Title> <div>
+      <div className=" text-gray-800 "> 
+        <Title className="text-lg"> 
           From
           <Span type="secondary" className="text-3xl">Cravings</Span>
-        </div>
+       
         <div>
           to
           <Span type="primary" className="text-3xl">Croffles</Span>
@@ -35,7 +35,7 @@ export default AboutUs;
 const Content = () => {
   return (
     <>
-      <div className="py-5 md:w-3/4 md:columns-2 mx-auto text-justify space-y-3 space-x-5 bg-surface px-5 shadow-gray-100 shadow-sm">
+      <div className="mb-25 py-5 md:w-3/4 md:columns-2 mx-auto text-center space-y-3 space-x-5 bg-surface px-5  shadow-gray-100 shadow-sm content-center">
         <p>
           Krffl’d Up started from something simple — a craving. Were just
           looking for that perfect bite — something sweet, crispy, a little

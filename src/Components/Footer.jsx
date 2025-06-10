@@ -1,6 +1,6 @@
-import logo from "/src/assets/logo.png";
 import SiteLink from "./SiteLink";
-const Header = ({
+
+const Footer = ({
   onScrollToHome,
   onScrollToCollections,
   onScrollToAbout,
@@ -32,22 +32,24 @@ const Header = ({
 
   return (
     <>
-      <div className="w-full">
-        <div className="md:w-3/4 mx-auto flex flex-col md:flex-row">
-          <img src={logo} className="mx-10 mt-10 w-60 h-20" />
-          <ul className="my-10 flex flex-col justify-items-center md:flex-row md:gap-10 md:text-lg  items-center ">
-            {links.map((item, index) => (
-              <SiteLink
-                key={index}
-                onClick={item.onClick}
-                buttonLabel={item.buttonLabel}
-              />
-            ))}
-          </ul>
+      <div className="h-50 w-full bg-yellow-800/50 py-5">
+        <div className="w-50 mx-auto  gap-4 text-sm text-center">
+          <div>
+            <h4 className="font-bold mb-2 text-lg">Site Map</h4>
+            <ul className="space-y-1 text-sm">
+              {links.map((item, index) => (
+                <SiteLink
+                  key={index}
+                  onClick={item.onClick}
+                  buttonLabel={item.buttonLabel}
+                />
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default Header;
+export default Footer;

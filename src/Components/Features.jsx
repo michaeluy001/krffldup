@@ -20,37 +20,27 @@ const Features = () => {
   ];
   return (
     <>
-      <div className="w-full mx-auto  lg:w-3/4 justify-items-center content-center">
-        <Title className="text-3xl">
-          Choose Krffl'd Up for your <Span>special</Span>{" "}
-          <Span type="secondary">day.</Span>{" "}
+      <div className=" w-11/12 mx-auto justify-items-center content-center mb-25">
+        <Title className="text-lg">
+          Choose Krffl'd Up for your <Span className="text-3xl">special</Span>
+          <Span type="secondary" className="text-3xl">day.</Span>
         </Title>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {" "}
-          {features.map((item, index) => (
-            <SwiperSlide key={index}>
-              <FeaturesCard image={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="w-[300px] sm:w-[400px] mx-auto content-center">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{ clickable: true }}
+            spaceBetween={20}
+            centeredSlides="true"
+            slidesPerView="auto"
+          >
+            {features.map((item, index) => (
+              <SwiperSlide key={index}>
+                <FeaturesCard image={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </>
   );
@@ -62,11 +52,13 @@ const FeaturesCard = ({ image }) => {
   return (
     <>
       <div>
-        <img src={image.src} alt={image.alt} className="w-[500px] h-150 aspect-auto object-fit" />
+        <img
+          src={image.src}
+          alt={image.alt}
+          className=" h-150  aspect-auto object-contain"
+        />
       </div>
-      {/* <div>
-          <p>{image.desc}</p>
-        </div> */}
+
     </>
   );
 };

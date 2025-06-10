@@ -1,5 +1,5 @@
 const Title = ({ children, className }) => {
-  const baseStyle = " mb-10 text-yellow-800 text-center font-bold ";
+  const baseStyle = " mt-20 mb-5 text-yellow-800 text-center font-bold ";
 
   return (
     <>
