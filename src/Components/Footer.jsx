@@ -36,7 +36,7 @@ const Footer = ({
         <div className="w-50 mx-auto  gap-4 text-sm text-center">
           <div>
             <h4 className="font-bold mb-2 text-lg">Site Map</h4>
-            <ul className="space-y-1 text-sm">
+            <ul className="space-y-1 ">
               {links.map((item, index) => (
                 <SiteLink
                   key={index}

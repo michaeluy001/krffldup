@@ -32,10 +32,10 @@ const Header = ({
 
   return (
     <>
-      <div className="w-full">
-        <div className="md:w-3/4 mx-auto flex flex-col md:flex-row">
-          <img src={logo} className="mx-10 mt-10 w-60 h-20" />
-          <ul className="my-10 flex flex-col justify-items-center md:flex-row md:gap-10 md:text-lg  items-center ">
+      <div className="w-full bg-surface fixed z-25 shadow-xl ">
+        <div className="md:w-3/4 mx-auto flex flex-col md:flex-row items-center">
+          <Logo />
+          <ul className="my-5 flex flex-col justify-items-center md:flex-row md:gap-10 md:text-lg  items-center ">
             {links.map((item, index) => (
               <SiteLink
                 key={index}
@@ -51,3 +51,10 @@ const Header = ({
 };
 
 export default Header;
+
+
+const Logo = () => {
+  return<>
+    <img src={logo} className="mx-10 w-30 h-10" />
+  </>
+}
