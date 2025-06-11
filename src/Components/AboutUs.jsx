@@ -5,20 +5,24 @@ import aboutUs from "/src/assets/About Us.jpg";
 const AboutUs = () => {
   return (
     <>
-      <div className=" text-gray-800 "> 
-        <Title className="text-lg"> 
+      <div className=" text-gray-800 md:w-1/2 mx-auto">
+        <Title className="text-lg">
           From
-          <Span type="secondary" className="text-3xl">Cravings</Span>
-       
-        <div>
-          to
-          <Span type="primary" className="text-3xl">Croffles</Span>
-        </div>  </Title>
+          <Span type="secondary" className="text-3xl">
+            Cravings
+          </Span>
+          <div>
+            to
+            <Span type="primary" className="text-3xl">
+              Croffles
+            </Span>
+          </div>
+        </Title>
         <div className="">
           <img
             src={aboutUs}
             alt="Croffle Cart "
-            className="w-full md:h-130 md:w-3/4 mx-auto object-cover"
+            className="w-full  md:w-3/4 mx-auto object-contain"
           />
         </div>
         <div className=" text-center content-center">
@@ -30,7 +34,6 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
 
 const Content = () => {
   return (

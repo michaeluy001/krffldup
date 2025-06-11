@@ -1,41 +1,72 @@
+import almond from "/src/assets/Almond.jpg";
+import choco from "/src/assets/choco loco.jpg";
+import biscroffle from "/src/assets/biscroffle.jpg";
+import matcha from "/src/assets/matcha.jpg";
+import oreo from "/src/assets/oreo.jpg";
 
-import photo1 from "/src/assets/Collections1.jpg";
-import photo2 from "/src/assets/Collections2.jpg";
-import photo3 from "/src/assets/Collections3.jpg";
 import LinkButton from "./CTAs/LinkButton";
 import Span from "./Utilities/Span";
 import Title from "./Utilities/Title";
-
+import { motion } from "motion/react";
 
 const FeaturedCollections = () => {
   const collections = [
     {
-      imgSrc: photo1,
+      imgSrc: almond,
       caption:
-        "Croffle: Where crispy waffle meets soft croissant, a delicious hybrid treat! Flaky layers and golden goodness combine in every bite. Perfect for breakfast, snack, or dessert!",
-      alt: "Croffle 1",
+        "Indulge in our Nutella Almond Croffle — a golden, crispy croffle topped with fluffy whipped cream, rich Nutella drizzle, and a generous sprinkle of crunchy almond slices. Pure bliss in every bite!",
+      alt: "Almond Nutella Bliss",
     },
     {
-      imgSrc: photo2,
+      imgSrc: choco,
       caption:
-        "Classic Croffle Golden brown and crispy, this classic croffle is freshly baked to perfection. Flaky layers unfold with each bite, revealing a soft and airy interior. Perfect with a drizzle of honey or maple syrup.",
-      alt: "Croffle 2",
+        "Croffle perfection topped with fluffy whipped cream, Oreo cookie bits, and a whole Oreo — the ultimate treat for Oreo fanatics.",
+      alt: "Choco Loco",
     },
     {
-      imgSrc: photo3,
+      imgSrc: biscroffle,
       caption:
-        "Sticky caramel drizzle and crunchy pecans elevate this croffle to new heights. Flaky, buttery pastry gives way to a sweet and gooey center. A delightful combination of textures and flavors that's sure to impress.",
-      alt: "Croffle 3",
+        "Warm, crispy croffle smothered in whipped cream, topped with crunchy Biscoff crumbs and a whole Biscoff cookie — a caramelized treat that melts in your mouth.",
+      alt: "Biscroffle",
+    },
+    {
+      imgSrc: oreo,
+      caption:
+        "Croffle perfection topped with fluffy whipped cream, Oreo cookie bits, and a whole Oreo — the ultimate treat for Oreo fanatics.",
+      alt: "Nutty Dream Oreo",
+    },
+    {
+      imgSrc: matcha,
+      caption:
+        "Delight in a crispy croffle layered with rich matcha, crunchy almonds, and a cloud of whipped cream on top — the perfect balance of earthy and sweet!",
+      alt: "Matcha Supreme",
     },
   ];
 
   return (
     <>
       <div className="mb-50   w-8/12 mx-auto content-center justify-items-center items-center ">
-        <Title>Our <Span type="primary" className="text-3xl">Best</Span> <br/> <Span type="secondary" className="text-3xl">Sellers</Span> </Title>
-        <div className=" h-3/4 flex flex-col lg:flex-row items-center gap-25">
+        <Title>
+          Our{" "}
+          <Span type="primary" className="text-3xl">
+            Best
+          </Span>{" "}
+          <br />{" "}
+          <Span type="secondary" className="text-3xl">
+            Sellers
+          </Span>{" "}
+        </Title>
+        <div className=" h-3/4 flex flex-col lg:flex-row items-center gap-3">
           {collections.map((item, index) => (
-            <CollectionsCard key={index} index={index} card={item} />
+            <motion.div
+              key={index}
+              className="justify-items-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 3, delay: index / 3 }}
+            >
+              <CollectionsCard index={index} card={item} />
+            </motion.div>
           ))}
         </div>
         <LinkButton />
@@ -49,7 +80,11 @@ export default FeaturedCollections;
 const CollectionsCard = ({ card, index }) => {
   return (
     <>
-      <div className={`h-150  md:w-1/3 min-w-[300px] overflow-xhidden flex flex-col ${index % 2 === 1 ? 'lg:flex-col-reverse' : 'flex-col' }  bg-surface shadow-gray-100 shadow-sm`}>
+      <div
+        className={`h-150  md:w-1/3 min-w-[300px] overflow-xhidden flex flex-col ${
+          index % 2 === 1 ? "lg:flex-col-reverse" : "flex-col"
+        }  bg-surface shadow-gray-100 shadow-sm`}
+      >
         <div className=" h-1/2 ">
           <img
             src={card.imgSrc}
@@ -57,9 +92,13 @@ const CollectionsCard = ({ card, index }) => {
             className="aspect-1/1 size-full object-cover"
           />
         </div>
-        <p className=" h-1/2 text-center content-center p-5 overflow-hidden ">
+        <div className="h-1/2  text-center content-center p-5 overflow-hidden">
+        <p className="text-lg font-bold">{card.alt} </p>
+        <p className="  ">
+    
           {card.caption}
         </p>
+        </div>
       </div>
     </>
   );

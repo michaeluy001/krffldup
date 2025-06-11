@@ -53,6 +53,7 @@ const EmailForm = () => {
             action="https://formspree.io/f/xqabppyl"
             method="POST"
             component="form"
+            encType="application/x-www-form-urlencoded"
             sx={{
               "& .MuiTextField-root": {
                 m: 1,
@@ -75,18 +76,22 @@ const EmailForm = () => {
             autoComplete="off"
           >
             <div className="flex flex-col my-5">
-              <TextField label="Email" />
+              <TextField label="Email" name="email" type="email" required />
               <TextField
-                id="outlined-multiline-static"
+                id="message"
                 label="Message"
+                name="message" 
+                required
+                type="email"
                 multiline
+                
                 rows={4}
               />
             </div>
 
             <input
               type="submit"
-              className=" bg-secondary px-3 rounded-3xl text-white hover:scale-105 transition cursor-pointer "
+              className=" bg-secondary px-3 rounded-3xl text-white hover:scale-105 transition cursor-pointer " value="Send"
             />
           </Box>
         </div>
@@ -107,20 +112,20 @@ const SocialLinks = () => {
       <div className="flex flex-col w-full md:w-1/2">
         <p className="text-center text-2xl">Follow Us!</p>
         <div className="h-[1px] w-1/2 mx-auto my-5 bg-gray-500"></div>
-        <ul className="w-auto h-15  flex items-center justify-center text-3xl gap-10">
+        <ul className="w-auto h-15  flex items-center justify-center text-3xl gap-10 ">
           <li>
             <a href={socLinks[0]} aria-label="">
-              <FaFacebook className="text-blue-800" />
+              <FaFacebook className="text-blue-800 hover:scale-105 transition" />
             </a>
           </li>
           <li>
             <a href={socLinks[1]}>
-              <FaInstagram className="text-orange-700" />
+              <FaInstagram className="text-orange-700 hover:scale-105 transition" />
             </a>
           </li>
           <li>
             <a href={socLinks[2]}>
-              <FaTiktok />
+              <FaTiktok className="text-black hover:scale-105 transition"/>
             </a>
           </li>
         </ul>

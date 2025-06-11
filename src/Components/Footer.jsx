@@ -32,7 +32,7 @@ const Footer = ({
 
   return (
     <>
-      <div className="h-50 w-full bg-yellow-800/50 py-5">
+      <div className="h-55 w-full bg-yellow-800/50 py-5">
         <div className="w-50 mx-auto  gap-4 text-sm text-center">
           <div>
             <h4 className="font-bold mb-2 text-lg">Site Map</h4>
@@ -45,6 +45,7 @@ const Footer = ({
                 />
               ))}
             </ul>
+            <a href="https://michaeluy001.github.io/web-portfolio/" className="flex font-bold text-surface border px text-center justify-center hover:scale-102 transition my-2">Contact the Developer</a>
           </div>
         </div>
       </div>

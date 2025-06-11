@@ -1,5 +1,5 @@
 const Button = ({ children, onClick, type="default" }) => {
-  const baseStyle = `h-10 w-30 rounded-4xl text-sm hover:scale-102 transition cursor-pointer`;
+  const baseStyle = `h-8 w-25 rounded-4xl text-xs hover:scale-102 transition cursor-pointer`;
   const variants = 
     {
         default: `bg-yellow-800 text-white`,
