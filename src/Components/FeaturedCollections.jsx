@@ -20,7 +20,7 @@ const FeaturedCollections = () => {
     {
       imgSrc: choco,
       caption:
-        "Croffle perfection topped with fluffy whipped cream, Oreo cookie bits, and a whole Oreo — the ultimate treat for Oreo fanatics.",
+        "Dive into chocolate heaven with our chocolate croffle—a crispy, flaky waffle infused with melted chocolate. It’s topped with airy whipped cream, drizzled with warm chocolate sauce, and sprinkled with crunchy chocolate chips for the perfect blend of textures. An irresistible treat for every chocolate lover!",
       alt: "Choco Loco",
     },
     {
@@ -45,7 +45,7 @@ const FeaturedCollections = () => {
 
   return (
     <>
-      <div className="mb-50   w-8/12 mx-auto content-center justify-items-center items-center ">
+      <div className="mb-50  w-8/12 mx-auto content-center justify-items-center items-center ">
         <Title>
           Our{" "}
           <Span type="primary" className="text-3xl">
@@ -69,7 +69,7 @@ const FeaturedCollections = () => {
             </motion.div>
           ))}
         </div>
-        <LinkButton />
+        {/* <LinkButton />  hidden for now.*/}
       </div>
     </>
   );
@@ -81,23 +81,20 @@ const CollectionsCard = ({ card, index }) => {
   return (
     <>
       <div
-        className={`h-150  md:w-1/3 min-w-[300px] overflow-xhidden flex flex-col ${
+        className={`h-170  md:w-1/3 min-w-[300px] overflow-x-hidden flex flex-col ${
           index % 2 === 1 ? "lg:flex-col-reverse" : "flex-col"
         }  bg-surface shadow-gray-100 shadow-sm`}
       >
-        <div className=" h-1/2 ">
+        <div className=" ">
           <img
             src={card.imgSrc}
             alt={card.alt}
             className="aspect-1/1 size-full object-cover"
           />
         </div>
-        <div className="h-1/2  text-center content-center p-5 overflow-hidden">
-        <p className="text-lg font-bold">{card.alt} </p>
-        <p className="  ">
-    
-          {card.caption}
-        </p>
+        <div className="h-1/2  text-center content-center p-5  ">
+          <p className="text-lg font-bold">{card.alt} </p>
+          <p className="break-words whitespace-normal">{card.caption}</p>
         </div>
       </div>
     </>
