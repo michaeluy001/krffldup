@@ -27,7 +27,7 @@ const FeaturedCollections = () => {
       imgSrc: biscroffle,
       caption:
         "Warm, crispy croffle smothered in whipped cream, topped with crunchy Biscoff crumbs and a whole Biscoff cookie — a caramelized treat that melts in your mouth.",
-      alt: "Biscroffle",
+      alt: "Biscroffle Delight",
     },
     {
       imgSrc: oreo,
@@ -83,7 +83,7 @@ const CollectionsCard = ({ card, index }) => {
       <div
         className={`h-170  md:w-1/3 min-w-[300px] overflow-x-hidden flex flex-col ${
           index % 2 === 1 ? "lg:flex-col-reverse" : "flex-col"
-        }  bg-surface shadow-gray-100 shadow-sm`}
+        }  bg-surface shadow-2xl border border-gray-50`}
       >
         <div className=" ">
           <img

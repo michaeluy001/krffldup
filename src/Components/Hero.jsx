@@ -1,4 +1,4 @@
-import hero from "/src/assets/hero-croffle.jpg";
+import hero from "/src/assets/hero photo.jpg";
 import { Frame } from "./Utilities/Frame";
 import Button from "./CTAs/Button";
 import Span from "./Utilities/Span";

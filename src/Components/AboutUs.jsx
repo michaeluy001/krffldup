@@ -5,7 +5,7 @@ import aboutUs from "/src/assets/About Us.jpg";
 const AboutUs = () => {
   return (
     <>
-      <div className=" text-gray-800 md:w-1/2 mx-auto">
+      <div className=" text-gray-800  mx-auto ">
         <Title className="text-lg">
           From
           <Span type="secondary" className="text-3xl">
@@ -18,16 +18,17 @@ const AboutUs = () => {
             </Span>
           </div>
         </Title>
-        <div className="">
+        <div className="relative">
           <img
             src={aboutUs}
             alt="Croffle Cart "
             className="w-full  md:w-3/4 mx-auto object-contain"
           />
+          <div className="md:absolute bottom-0 left-0">
+          <Content /></div>
         </div>
-        <div className=" text-center content-center">
-          <Content />
-        </div>
+        
+       
       </div>
     </>
   );
@@ -38,7 +39,7 @@ export default AboutUs;
 const Content = () => {
   return (
     <>
-      <div className="mb-25 py-5 md:w-3/4 md:columns-2 mx-auto text-center space-y-3 space-x-5 bg-surface px-5  shadow-gray-100 shadow-sm content-center">
+      <div className=" py-5 md:w-3/4 md:columns-2 mx-auto text-center space-y-3 space-x-5 bg-surface/90 px-5  shadow-gray-100 shadow-sm content-center  ">
         <p>
           Krffl’d Up started from something simple — a craving. Were just
           looking for that perfect bite — something sweet, crispy, a little
