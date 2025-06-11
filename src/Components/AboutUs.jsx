@@ -7,14 +7,11 @@ const AboutUs = () => {
     <>
       <div className=" text-gray-800  mx-auto ">
         <Title className="text-lg">
-          From
-          <Span type="secondary" className="text-3xl">
-            Cravings
+          From  
+           <Span type="secondary" className="text-3xl">Cravings
           </Span>
           <div>
-            to
-            <Span type="primary" className="text-3xl">
-              Croffles
+            to <Span type="primary" className="text-3xl">Croffles
             </Span>
           </div>
         </Title>

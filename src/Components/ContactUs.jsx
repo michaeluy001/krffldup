@@ -18,11 +18,11 @@ const ContactUs = forwardRef((props, ref) => {
     <>
       <div className="flex flex-col my-25  mx-auto w-11/12 gap-10" ref={ref}>
         <Title className="text-lg">
-          For
+          For 
           <Span type="secondary" className="text-3xl">
-            Orders,
+          Orders,
           </Span>
-          <Span className="text-3xl">Bookings, </Span> and other inquiries...
+          <Span className="text-3xl">Bookings,</Span> and other inquiries...
         </Title>
         <Location />
         <div className="bg-surface h-[1px] w-1/2 mx-auto"></div>

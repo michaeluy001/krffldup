@@ -9,7 +9,7 @@ const Span = ({ children, onClick, type="primary", className }) => {
   
   return (
     <>
-     <span className={`${variants[type]} ${className} px-2 rounded-sm`} onClick={onClick}> {children} </span>
+     <span className={`${variants[type]} ${className} px-2 rounded-xs`} onClick={onClick}>{children}</span>
 
     </>
   );
