@@ -39,9 +39,9 @@ export default AboutUs;
 const Content = () => {
   return (
     <>
-      <div className=" py-5 md:w-3/4 md:columns-2 mx-auto text-center space-y-3 space-x-5 bg-surface/90 px-5  shadow-gray-100 shadow-sm content-center  ">
+      <div className=" py-5 md:w-3/4 md:columns-2 mx-auto text-center space-y-3 space-x-5 bg-surface/90 px-5  shadow-gray-100 shadow-sm content-center ">
         <p>
-          Krffl’d Up started from something simple — a craving. Were just
+          <span className="font-bold text-2xl text-yellow-800">Krffl’d Up</span> started from something simple — a craving. Were just
           looking for that perfect bite — something sweet, crispy, a little
           extra, and totally satisfying. When we couldn’t find exactly what we
           were craving, we decided to make it ourselves. That’s how Krffl’d Up
