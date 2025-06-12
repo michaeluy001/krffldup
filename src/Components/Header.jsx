@@ -9,27 +9,7 @@ const Header = ({
   onScrollToFeatures,
   onScrollToContact,
 }) => {
-//   const heightRef = useRef();
-// const [headerHeight, setHeaderHeight] = useState();
 
-// useEffect(() => {
-//     const updateHeight = () => {
-//       if (heightRef.current) {
-//         setHeaderHeight(heightRef.current.clientHeight);
-//       }
-//     };
-
-//     // Run once after initial render
-//     updateHeight();
-
-//     // Re-run on window resize
-//     window.addEventListener('resize', updateHeight);
-
-//     // Clean up on unmount
-//     return () => {
-//       window.removeEventListener('resize', updateHeight);
-//     };
-//   }, []);
   
   const links = [
     {

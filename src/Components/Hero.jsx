@@ -31,7 +31,7 @@ const HeroLabel = ({onCTAClick}) => {
     <>
       <div className="relative justify-items-center space-y-5 w-11/12 sm:w-100 mx-auto mt-10 bg-surface p-3 rounded-2xl">
         
-        <motion.p className="text-lg  text-yellow-800 text-center font-bold md:text-4xl" initial={{scale: 0}} animate={{scale: 1}} transition={{duration: 0.5, delay: 1, type:"spring"}}>
+        <motion.p className="text-lg  text-yellow-800 font-bold md:text-4xl" initial={{scale: 0}} animate={{scale: 1}} transition={{duration: 0.5, delay: 1, type:"spring"}}>
           
           Where <Span type="primary" >Croissants</Span> meet <Span type="secondary" >Waffles</Span> — And Magic Happens!
         </motion.p>
@@ -40,7 +40,7 @@ const HeroLabel = ({onCTAClick}) => {
           obsession everyone’s talking about.
         </motion.p>
     
-          <Button onClick={onCTAClick} type="primary">Contact Us</Button>
+          <Button onClick={onCTAClick} type="primary">Order now!</Button>
     
      
       </div>
