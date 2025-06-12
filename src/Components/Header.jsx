@@ -37,7 +37,7 @@ const Header = ({
       onClick: onScrollToHome,
     },
     {
-      buttonLabel: "Collections",
+      buttonLabel: "Our Bestsellers",
       onClick: onScrollToCollections,
     },
     {

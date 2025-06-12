@@ -13,7 +13,7 @@ const Footer = ({
       onClick: onScrollToHome,
     },
     {
-      buttonLabel: "Collections",
+      buttonLabel: "Our Bestsellers",
       onClick: onScrollToCollections,
     },
     {
